@@ -174,7 +174,7 @@ button,
 input,
 select,
 textarea {
-    border: 1px solid #ccc;
+    border: 1px solid #2844fb;
     border-radius: 3px;
     font-family: inherit;
     padding: 6px;
@@ -217,15 +217,16 @@ article.post-password-required input[type=submit],
     font-size: 0.785714286rem;
     line-height: 1.428571429;
     font-weight: normal;
-    color: #7c7c7c;
+    color: #f9f7f7;
     background-color: #e6e6e6;
     background-repeat: repeat-x;
     background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
     background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
     background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
     background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
-    background-image: linear-gradient(to bottom, #f4f4f4, #e6e6e6);
-    border: 1px solid #d2d2d2;
+    /* background-image: linear-gradient(to bottom, #f4f4f4, #e6e6e6); */
+    background-image: linear-gradient(to bottom, #2844fb, #4744ff);
+    border: 1px solid #2844fb;
     border-radius: 3px;
     box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
 }
@@ -513,6 +514,8 @@ a:hover {
     overflow: hidden;
     height: 1px;
     width: 1px;
+    border-radius: 18px;
+
 }
 
 .main-navigation .assistive-text:focus,
@@ -552,6 +555,15 @@ a:hover {
     margin: 1.714285714rem 0 0;
 }
 
+.image_title {
+    border: 1px solid #ccc;
+    /* text-align: right; */
+    float: right;
+
+}
+.image_title, .image_titleaa {
+    display: inline-block;
+}
 /* Header */
 .site-header {
     padding: 24px 0;
@@ -1239,6 +1251,7 @@ article.format-link .entry-content a {
     line-height: 1.090909091;
     text-decoration: none;
 }
+
 
 /* Quote posts */
 article.format-quote .entry-content p {

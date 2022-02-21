@@ -1,11 +1,16 @@
 {% load blog_tags %}
+{% load static %}
+{% block header %}
+{% endblock %}
+<link rel='stylesheet' id='twentytwelve-style-css' href='{% static 'blog/css/style.css' %}' type='text/css'
+media='all'/>
 <div id="secondary" class="widget-area" role="complementary">
     <aside id="search-2" class="widget widget_search">
         <form role="search" method="get" id="searchform" class="searchform" action="/search">
             <div>
                 <label class="screen-reader-text" for="s">搜索：</label>
-                <input type="text" value="" name="q" id="q"/>
-                <input type="submit" id="searchsubmit" value="搜索"/>
+                <input  type="text" placeholder="技术改变未来" value="" name="q" id="q"/>
+                <input  type="submit" id="searchsubmit" value="搜索"/>
             </div>
         </form>
     </aside>
@@ -74,7 +79,7 @@
         </aside>
     {% endif %}
     {% if sidabar_links %}
-        <aside id="linkcat-0" class="widget widget_links"><p class="widget-title">书签</p>
+        <aside id="linkcat-0" class="widget widget_links"><p class="widget-title">友情链接</p>
             <ul class='xoxo blogroll'>
                 {% for l in sidabar_links %}
                     <li>
@@ -104,7 +109,7 @@
             </div>
         </aside>
     {% endif %}
-    <aside id="text-2" class="widget widget_text"><p class="widget-title">欢迎您star或者fork本站源代码</p>
+    <!-- <aside id="text-2" class="widget widget_text"><p class="widget-title">欢迎您star或者fork本站源代码</p>
         <div class="textwidget">
 
             <p><a href="https://github.com/liangliangyy/DjangoBlog" rel="nofollow"><img
@@ -113,11 +118,11 @@
                     src="https://resource.lylinux.net/img.shields.io/github/forks/liangliangyy/djangoblog.svg?style=social&amp;label=Fork"
                     alt="GitHub forks"></a></p>
         </div>
-    </aside>
+    </aside> -->
 
     <aside id="meta-3" class="widget widget_meta"><p class="widget-title">功能</p>
         <ul>
-            <li><a href="/admin/" rel="nofollow">管理站点</a></li>
+            {% comment %} <li><a href="/admin/" rel="nofollow">管理站点</a></li> {% endcomment %}
             {% if user.is_authenticated %}
                 <li><a href="{% url "account:logout" %}" rel="nofollow">登出</a>
                 </li>
@@ -128,7 +133,7 @@
             {% if user.is_superuser %}
                 <li><a href="{% url 'owntracks:show_dates' %}" target="_blank">运动轨迹记录</a></li>
             {% endif %}
-            <li><a href="http://gitbook.lylinux.net" target="_blank" rel="nofollow">GitBook</a></li>
+            <!-- <li><a href="http://gitbook.lylinux.net" target="_blank" rel="nofollow">GitBook</a></li> -->
         </ul>
     </aside>
 
