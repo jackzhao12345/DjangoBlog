@@ -70,4 +70,3 @@ $(document).on('webkitAnimationEnd', function() {
 		rocket.removeClass('move');
 	}, 400);
 });
-.
