@@ -1,0 +1,14 @@
+name = "if12"
+bind = "127.0.0.1:8000"  # gunicorn监控的接口
+workers = 2  # 进程数
+threads = 4  # 每个进程开启的线程数
+proc_name = "app"
+pidfile = "./app.pid"  # gunicorn进程id，kill掉该文件的id，gunicorn就停止
+loglevel = "warning"
+logfile = "./warning.log"  # debug日志
+errorlog = "./error.log"  # 错误信息日志
+timeout = 90
+worker_class = "gevent"
+user = "www"
+group = "www"
+keepalive = 75
